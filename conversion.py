@@ -49,7 +49,7 @@ def get_unit(prompt):
             unit = input(prompt).upper()
             if unit in ("C", "F", "K"):
                 return unit
-            print("❌ Invalid unit. Please enter C, F, or K.\n")
+            print("Invalid unit. Please enter C, F, or K.\n")
         except KeyboardInterrupt:
             print("\n👋 Program exited by user.")
             exit()
@@ -69,15 +69,15 @@ def main():
         else:
             result = CONVERSIONS[(input_unit, output_unit)](temp)
 
-        print(f"\n✅ Result: {result:.2f} {output_unit}\n")
+        print(f"\n Result: {result:.2f} {output_unit}\n")
 
         try:
             again = input("Convert another temperature? (y/n): ").lower()
             if again != "y":
-                print("\n👋 Goodbye!")
+                print("\n Goodbye!")
                 break
         except KeyboardInterrupt:
-            print("\n👋 Program exited by user.")
+            print("\n Program exited by user.")
             break
 
 
